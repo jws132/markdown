@@ -1,9 +1,8 @@
 ---
-title: GMarkdown
+title: Markdown
 sidemenu: false
 ---
 
-> 此功能由[dumi](https://d.umijs.org/zh-CN/guide/advanced#umi-%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90%E6%A8%A1%E5%BC%8F)提供，dumi 是一个 📖 为组件开发场景而生的文档工具，用过的都说好。
 
 ## GMarkdown.Editor 组件
 
@@ -11,7 +10,7 @@ sidemenu: false
 
 ```tsx
 import React, { useState } from "react";
-import GMarkdown from "@/components/GMarkdown";
+import GMarkdown from "@jzo/markdown";
 
 export default () => {
   const valueInit = `
@@ -73,7 +72,7 @@ export default () => {
  */
 import { Button, Menu } from "antd";
 import React from "react";
-import { GMarkdown } from "@/components";
+import GMarkdown from "@jzo/markdown";
 
 export default () => {
   const value = `## 展示菜单
@@ -159,7 +158,7 @@ a11yDark,a11yLight,agate,anOldHope ,androidstudio ,arduinoLight, arta, ascetic, 
 ### 卸载内置插件
 
 ```js
-import GMarkdown, { Plugins } from "@/components/GMarkdown";
+import GMarkdown , { Plugins } from "@jzo/markdown";
 GMarkdown.unuse(Plugins.Header); // header
 GMarkdown.unuse(Plugins.FontBold); // font-bold
 ```
@@ -172,7 +171,7 @@ GMarkdown.unuse(Plugins.FontBold); // font-bold
 
 ```js
 import React from 'react';
-import GMarkdown from from '@/components/GMarkdown';
+import GMarkdown from "@jzo/markdown";
 
 const Counter = ({editor, editorConfig, config, pluginName}) => {
   console.log(editor,editorConfig,config,pluginName)
