@@ -191,7 +191,7 @@ const Counter = ({editor, editorConfig, config, pluginName}) => {
       title="Counter"
       onClick={handleClick}
     >
-      12
+      123213213
     </span>
   );
 }
@@ -203,8 +203,10 @@ Counter.defaultConfig = {
 Counter.align = 'left';
 // 这里定义插件名称，注意不能重复
 Counter.pluginName = 'counter';
+
+
 // 使用：
-GMarkdown.use(Counter, {
+GMarkdown.Editor.use(Counter, {
   start: 10
 });
 ```

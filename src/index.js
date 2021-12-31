@@ -1,3 +1,3 @@
 
-import Markdown from '@/components'
+import Markdown from './components'
 export default Markdown;

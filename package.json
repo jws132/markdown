@@ -16,14 +16,13 @@
     "dist"
   ],
   "repository": {
-		"type": "git",
-		"url": "https://github.com/jws132/markdown.git"
-	},
+    "type": "git",
+    "url": "https://github.com/jws132/markdown.git"
+  },
   "scripts": {
     "build": "webpack --env.NODE_ENV=production",
     "dev": "webpack-dev-server --inline --progress --config webpack.config.js"
   },
-  "author": "jiangwenshu1990@126.com",
   "license": "MIT",
   "dependencies": {
     "markdown-navbar": "^1.4.3",
