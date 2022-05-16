@@ -1,6 +1,6 @@
 {
   "name": "@jzo/markdown",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "基于react-markdown,react-markdown-editor-lite,markdown-navbar封装组件支持预览和编辑，代码高亮。",
   "keywords": [
     "@jzo",

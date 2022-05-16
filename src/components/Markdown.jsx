@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import PropTypes from "prop-types";
 import remarkGfm from 'remark-gfm';
 import CodeBlock from './components/CodeBlock';
 
@@ -23,6 +24,14 @@ const Markdown = ({ children, theme, components, remarkPlugins, markdownProps, .
     />
   );
 };
+
+
+Markdown.propTypes = {
+  theme:PropTypes.string,
+  components:PropTypes.object,
+  remarkPlugins:PropTypes.array,
+}
+
 
 Markdown.defaultProps = {
   theme: '',

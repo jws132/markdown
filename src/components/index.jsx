@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 import MarkNav from "markdown-navbar";
 import "markdown-navbar/dist/navbar.css";
 import Editor, { Plugins } from "./Editor";
 import Markdown from "./Markdown";
 import "./styles.less";
 
-const GMarkdown = ({
+const JMarkdown = ({
   value,
   theme,
   hideMarkNav,
@@ -42,7 +43,18 @@ const GMarkdown = ({
   );
 };
 
-GMarkdown.defaultProps = {
+JMarkdown.propTypes = {
+  theme:PropTypes.string,
+  hideMarkNav:PropTypes.bool,
+  headingTopOffset:PropTypes.number,
+  ordered:PropTypes.bool,
+  remarkPlugins:PropTypes.array,
+  markNavRender:PropTypes.func,
+  components:PropTypes.object,
+}
+
+
+JMarkdown.defaultProps = {
   theme: "",
   hideMarkNav: false, //是否开启目录
   headingTopOffset: 80, // 相对于窗顶位移的锚定
@@ -52,8 +64,8 @@ GMarkdown.defaultProps = {
   components: {},
 };
 
-GMarkdown.Editor = Editor;
+JMarkdown.Editor = Editor;
 
 export { Plugins };
 
-export default GMarkdown;
+export default JMarkdown;

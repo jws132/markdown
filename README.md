@@ -4,13 +4,13 @@ sidemenu: false
 ---
 
 
-## GMarkdown.Editor 组件
+## JMarkdown.Editor 组件
 
 这个组件自带了一些 Pro 的配置，你一般都需要改掉它的信息。
 
 ```tsx
 import React, { useState } from "react";
-import GMarkdown from "@jzo/markdown";
+import JMarkdown from "@jzo/markdown";
 
 export default () => {
   const valueInit = `
@@ -34,7 +34,7 @@ export default () => {
       </HeaderDropdown>
     );
   };
-  </GMarkdown> ~~~
+  </JMarkdown> ~~~
   `;
 
   const [value, setValue] = useState(valueInit);
@@ -42,7 +42,7 @@ export default () => {
     setValue(e);
   };
 
-  return <GMarkdown.Editor value={value} onChange={onEditor} />;
+  return <JMarkdown.Editor value={value} onChange={onEditor} />;
 };
 ```
 
@@ -62,7 +62,7 @@ export default () => {
 | onImageUpload    | 上传返回图片地址                                        | `() => Promise`              | -      |
 | markdownProps    | 组件参数 [https://github.com/remarkjs/react-markdown]() | `-`                          | -      |
 
-## GMarkdown 展示
+## JMarkdown 展示
 
 一个带补全数据的输入框，支持收起和展开 Input
 
@@ -72,7 +72,7 @@ export default () => {
  */
 import { Button, Menu } from "antd";
 import React from "react";
-import GMarkdown from "@jzo/markdown";
+import JMarkdown from "@jzo/markdown";
 
 export default () => {
   const value = `## 展示菜单
@@ -103,11 +103,11 @@ export default () => {
       </HeaderDropdown>
     );
   };
-  </GMarkdown> ~~~
+  </JMarkdown> ~~~
 
   ### 个人中心
   `;
-  return <GMarkdown>{value}</GMarkdown>;
+  return <JMarkdown>{value}</JMarkdown>;
 };
 ```
 
@@ -158,9 +158,9 @@ a11yDark,a11yLight,agate,anOldHope ,androidstudio ,arduinoLight, arta, ascetic, 
 ### 卸载内置插件
 
 ```js
-import GMarkdown , { Plugins } from "@jzo/markdown";
-GMarkdown.unuse(Plugins.Header); // header
-GMarkdown.unuse(Plugins.FontBold); // font-bold
+import JMarkdown , { Plugins } from "@jzo/markdown";
+JMarkdown.unuse(Plugins.Header); // header
+JMarkdown.unuse(Plugins.FontBold); // font-bold
 ```
 
 ## 编写插件
@@ -171,7 +171,7 @@ GMarkdown.unuse(Plugins.FontBold); // font-bold
 
 ```js
 import React from 'react';
-import GMarkdown from "@jzo/markdown";
+import JMarkdown from "@jzo/markdown";
 
 const Counter = ({editor, editorConfig, config, pluginName}) => {
   console.log(editor,editorConfig,config,pluginName)
@@ -205,7 +205,13 @@ Counter.pluginName = 'counter';
 
 
 // 使用：
-GMarkdown.Editor.use(Counter, {
+JMarkdown.Editor.use(Counter, {
   start: 10
 });
 ```
+
+## 更新
+
+0.0.1 组件发布
+0.0.2 修改REANME.md说明
+
